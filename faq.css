@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    --Font-size: 12px;
+
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: var(--Font-size);
+    background: linear-gradient(0deg, var(--Soft-blue) 0%, 
+    var(--Soft-violet) 100%) no-repeat center center fixed;
+  }
+  
+  h1, h2 {
+    font-weight: 700;
+  }
+
+  h1 {
+    color: var(--Very-dark-grayish-blue);
+    padding: 1vh 1vw;
+}
+
+  p {
+    color: var(--Dark-grayish-blue);
+    padding: 1vh 1vw;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 70vw;
+  max-width: 75vw;
+  height: 80vh;
+  max-height: 80vh;
+  background-image: url(faq-accordion-card-main/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: -35vw -30vh;
+  margin: 10vh 15vw;
+  justify-content: space-between;
+  border-radius: 2vw;
+}
+
+.right {
+  padding: 1vh 11vw;
+}
+
+h2 {
+    padding: 0vh 1vw;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+  hr{
+    color: var(--Light-grayish-blue);
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+.woman {
+  max-width: 30vw;
+  width: 30vw;
+  margin: 0vh -5vw;
+}
+
+.box {
+  position: absolute;
+  transform: translate(-100%, 30%);
+  z-index: 1;
+  width: 15vw;
+}
+
+@media screen and (max-width:768px) {
+
+  .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url(faq-accordion-card-main/images/bg-pattern-mobile.svg);
+    background-size: 51%;
+    background-position: 17vw 2vh;
+    justify-content: space-between;
+    align-items: center;
+    height: 88vh;
+    max-height: 90vh;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  max-width: 75vw;
+  height: 65vh;
+  max-height: 70vh;
+  margin: 10vh 0vw;
+}
+
+.left {
+  padding: 1vh 0vw;
+  margin: -12vh 0vw;
+}
+
+
+}

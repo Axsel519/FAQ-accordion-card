@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Title -->
+    <title>Card</title>
+      <!-- Icon -->
+    <link rel="icon" href="faq-accordion-card-main/images/icon.webp">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!--style sheet-->
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+
+    <div class="card">
+
+        <div class="right">
+            <div class="logo-name">
+                <h1>FAQ</h1>
+            </div>
+
+            <div class="questions">
+
+                <div class="question1">
+
+                    <div class="question">
+
+                        <div class="top">
+                            <h2>How many team members can I invite?</h2>
+                            <img src="faq-accordion-card-main/images/icon-arrow-down.svg" alt="icon">  
+                        </div>
+
+                        <div class="answer" style="display: none;">
+                            <p> 
+                                You can invite up to 2 additional users on the Free plan. 
+                                There is no limit on team members for the Premium plan.
+                            </p>
+                        </div>
+
+                    </div>
+                                
+                </div>
+
+                <hr>
+
+                <div class="question2">
+
+                    <div class="question">
+
+                        <div class="top">
+                        <h2>What is the maximum file upload size?</h2>
+                        <img src="faq-accordion-card-main/images/icon-arrow-down.svg" alt="icon">
+                        </div>
+
+                        <div class="answer" style="display: none;">
+                            <p> 
+                                No more than 2GB. 
+                                All files in your account must fit your allotted storage space.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <hr>
+
+                <div class="question3">
+
+                    <div class="question">
+
+                        <div class="top">
+                        <h2> How do I reset my password?</h2>
+                        <img src="faq-accordion-card-main/images/icon-arrow-down.svg" alt="icon">
+                        </div>
+
+                        <div class="answer" style="display: none;">
+                            <p> 
+                                Click “Forgot password” from the login page or 
+                                “Change password” from your profile page. 
+                                A reset link will be emailed to you.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                
+                <hr>
+
+                <div class="question4">
+
+                    <div class="question">
+                        <div class="top">
+                        <h2>Can I cancel my subscription?</h2>
+                        <img src="faq-accordion-card-main/images/icon-arrow-down.svg" alt="icon">
+                        </div>
+
+                        <div class="answer" style="display: none;">
+                            <p> 
+                                Yes! Send us a message and we’ll process your request no questions asked.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <hr>
+
+                <div class="question5">
+
+                    <div class="question">
+                        <div class="top">
+                        <h2>Do you provide additional support?</h2>
+                        <img src="faq-accordion-card-main/images/icon-arrow-down.svg" alt="icon">
+                        </div>
+
+                        <div class="answer" style="display: none;">
+                            <p> 
+                                Chat and email support is available 24/7. 
+                                Phone lines are open during normal business hours.
+
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="left">
+            <img class="woman" src="faq-accordion-card-main/images/illustration-woman-online-desktop.svg" alt="woman">
+            <img class="box" src="faq-accordion-card-main/images/illustration-box-desktop.svg" alt="box">
+        </div>
+
+    </div>
+
+    <script>
+// Get all the questions and answers
+const questions = document.querySelectorAll('.question');
+const answers = document.querySelectorAll('.answer');
+const icons = document.querySelectorAll('.question img'); // Select all the images
+
+questions.forEach((question, index) => {
+    const answer = answers[index];
+    const icon = icons[index]; // Get the image (icon) for the current question
+
+    question.addEventListener('click', function() {
+        // Hide all answers and reset icons
+        answers.forEach((ans, i) => {
+            if (i !== index) {
+                ans.style.display = 'none';
+                icons[i].classList.remove('rotate'); // Reset other icons
+            }
+        });
+
+        // Toggle current answer and icon
+        if (answer.style.display === 'none' || answer.style.display === '') {
+            answer.style.display = 'block';
+            icon.classList.add('rotate'); // Add the rotate class to the image
+        } else {
+            answer.style.display = 'none';
+            icon.classList.remove('rotate'); // Remove the rotate class to reset the image
+        }
+    });
+});
+
+    </script>
+    
+</body>
+</html>
